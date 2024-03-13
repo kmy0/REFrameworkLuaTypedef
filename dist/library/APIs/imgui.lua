@@ -880,6 +880,12 @@ function imgui.set_clipboard(data) end
 ---@return string
 function imgui.get_clipboard() end
 
+---@param progress number
+---@param size Vector2f|number[]|Vector3f|Vector4f
+---@param overlay string
+---@return nil
+function imgui.progress_bar(progress, size, overlay) end
+
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_table)
 ---
