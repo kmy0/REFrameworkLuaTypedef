@@ -12,7 +12,7 @@ function DynamicArrayNoCapacityTreeNodeData:as_memoryview() end
 ---@return boolean
 function DynamicArrayNoCapacityTreeNodeData:empty() end
 
----@param fix_pointers boolean?
+---@param fix_pointers? boolean
 ---@return BehaviorTreeNodeData?
 function DynamicArrayNoCapacityTreeNodeData:emplace(fix_pointers) end
 
@@ -33,6 +33,6 @@ function DynamicArrayNoCapacityTreeNodeData:get_size() end
 ---@return nil
 function DynamicArrayNoCapacityTreeNodeData:erase(index) end
 
----@param force boolean?
+---@param force? boolean
 ---@return nil
 function DynamicArrayNoCapacityTreeNodeData:clear(force) end

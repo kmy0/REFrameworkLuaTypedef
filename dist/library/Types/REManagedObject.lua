@@ -70,7 +70,7 @@ function REManagedObject:release() end
 ---[View documents](https://cursey.github.io/reframework-book/api/types/REManagedObject.html#selfdeserialize_nativedata-objects)
 ---
 ---@param data_obj integer[]
----@param objects_obj REManagedObject[]?
+---@param objects_obj? REManagedObject[]
 ---@return nil
 function REManagedObject:deserialize_native(data_obj, objects_obj) end
 

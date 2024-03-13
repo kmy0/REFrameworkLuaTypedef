@@ -22,12 +22,12 @@ local RETransform = {}
 function RETransform:calculate_base_transform(target) end
 
 ---@param joint REManagedObject
----@param depth integer?
+---@param depth? integer
 ---@return Vector4f
 function RETransform:calculate_tpose_pos_world(joint, depth) end
 
 ---@param joints REManagedObject[]
----@param additional_parents integer?
+---@param additional_parents? integer
 ---@return nil
 function RETransform:apply_joints_tpose(joints, additional_parents) end
 
@@ -39,7 +39,7 @@ function RETransform:apply_joints_tpose(joints, additional_parents) end
 ---[View documents](https://cursey.github.io/reframework-book/api/types/RETransform.html#selfset_positionposition-no_dirty)
 ---
 ---@param pos Vector4f
----@param no_dirty boolean?
+---@param no_dirty? boolean
 ---@return nil
 function RETransform:set_position(pos, no_dirty) end
 

@@ -12,7 +12,7 @@ function DynamicArrayNoCapacityInt32:as_memoryview() end
 ---@return boolean
 function DynamicArrayNoCapacityInt32:empty() end
 
----@param fix_pointers boolean?
+---@param fix_pointers? boolean
 ---@return integer?
 function DynamicArrayNoCapacityInt32:emplace(fix_pointers) end
 
@@ -33,6 +33,6 @@ function DynamicArrayNoCapacityInt32:get_size() end
 ---@return nil
 function DynamicArrayNoCapacityInt32:erase(index) end
 
----@param force boolean?
+---@param force? boolean
 ---@return nil
 function DynamicArrayNoCapacityInt32:clear(force) end

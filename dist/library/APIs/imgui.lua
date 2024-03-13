@@ -996,7 +996,7 @@ function imgui.table_get_column_flags(column) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_set_bg_color)
 ---
----@param target integer  `ImGuiTableBgTarget`
+---@param target integer `ImGuiTableBgTarget`
 ---@param color integer
 ---@param column integer
 ---@return nil

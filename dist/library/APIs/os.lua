@@ -24,16 +24,16 @@ function os.rename(oldname, newname) end
 ---This function is restricted by REFramework.
 ---
 ---@param command? string
----@return boolean?  suc
+---@return boolean? suc
 ---@return exitcode? exitcode
----@return integer?  code
+---@return integer? code
 ---@deprecated
 function os.execute(command) end
 
 ---
 ---This function is restricted by REFramework.
 ---
----@param code?  boolean|integer
+---@param code? boolean|integer
 ---@param close? boolean
 ---@deprecated
 function os.exit(code, close) end
@@ -41,7 +41,7 @@ function os.exit(code, close) end
 ---
 ---This function is restricted by REFramework.
 ---
----@param locale    string|nil
+---@param locale string|nil
 ---@param category? localecategory
 ---@return string localecategory
 ---@deprecated

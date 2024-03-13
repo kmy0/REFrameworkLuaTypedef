@@ -51,6 +51,6 @@ function json.load_file(filepath) end
 ---
 ---@param filepath string
 ---@param obj table
----@param indent_obj integer?
+---@param indent_obj? integer
 ---@return boolean
 function json.dump_file(filepath, obj, indent_obj) end
