@@ -805,6 +805,18 @@ function imgui.set_next_item_width(item_width) end
 ---@return number
 function imgui.calc_item_width() end
 
+---@param label string
+---@param pos Vector2f|number[]|Vector3f|Vector4f
+---@param size Vector2f|number[]|Vector3f|Vector4f
+---@return boolean
+function imgui.item_add(label, pos, size) end
+
+---@param pos Vector2f|number[]|Vector3f|Vector4f
+---@param size Vector2f|number[]|Vector3f|Vector4f
+---@param text_baseline_y? number
+---@return nil
+function imgui.item_size(pos, size, text_baseline_y) end
+
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_color)
 ---
@@ -885,6 +897,19 @@ function imgui.get_clipboard() end
 ---@param overlay string
 ---@return nil
 function imgui.progress_bar(progress, size, overlay) end
+
+---@return nil
+function imgui.draw_list_path_clear() end
+
+---@param pos_obj Vector2f|number[]|Vector3f|Vector4f
+---@return nil
+function imgui.draw_list_path_line_to(pos_obj) end
+
+---@param color integer
+---@param closed? boolean
+---@param thickness? number
+---@return nil
+function imgui.draw_list_path_stroke(color, closed, thickness) end
 
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_table)

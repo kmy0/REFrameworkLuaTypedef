@@ -11,4 +11,4 @@
 
 ### Definition Files Compatibility
 
-- [REFramework](https://github.com/praydog/REFramework/commit/9f0109c4c9c215c6aa97f91b20b569180e6c2c38) 9f0109c4c9c215c6aa97f91b20b569180e6c2c38
+- [REFramework](https://github.com/praydog/REFramework/commit/1a551cc2fbd73f882a0c27be6bad87e52b38f845) 1a551cc2fbd73f882a0c27be6bad87e52b38f845
