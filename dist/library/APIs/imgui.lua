@@ -553,75 +553,97 @@ function imgui.get_id(id) end
 function imgui.get_mouse() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_key_index)
+---Returns the index of the specified `imgui_key`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_key_indeximgui_key)
 ---
 ---@param imgui_key integer `ImGuiKey`
 ---@return integer `ImGuiKey`
 function imgui.get_key_index(imgui_key) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_down)
+---Returns true if the specified `key` is currently being held down.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_downkey)
 ---
 ---@param key integer `ImGuiKey`
 ---@return boolean
 function imgui.is_key_down(key) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_pressed)
+---Returns true if the specified `key` was pressed during the current frame.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_pressedkey )
 ---
 ---@param key integer `ImGuiKey`
 ---@return boolean
 function imgui.is_key_pressed(key) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_released)
+---Returns true if the specified `key` was released during the current frame.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_key_releasedkey)
 ---
 ---@param key integer `ImGuiKey`
 ---@return boolean
 function imgui.is_key_released(key) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_down)
+---Returns true if the specified mouse `button` is currently being held down.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_downbutton)
 ---
 ---@param button integer `ImGuiMouseButton`
 ---@return boolean
 function imgui.is_mouse_down(button) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_clicked)
+---Returns true if the specified mouse `button` was clicked during the current frame.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_clickedbutton)
 ---
 ---@param button integer `ImGuiMouseButton`
 ---@return boolean
 function imgui.is_mouse_clicked(button) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_released)
+---Returns true if the specified mouse `button` was released during the current frame.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_releasedbutton)
 ---
 ---@param button integer `ImGuiMouseButton`
 ---@return boolean
 function imgui.is_mouse_released(button) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_double_clicked)
+---Returns true if the specified mouse `button` was double-clicked during the current frame.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_mouse_double_clickedbutton)
 ---
 ---@param button integer `ImGuiMouseButton`
 ---@return boolean
 function imgui.is_mouse_double_clicked(button) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiindent)
+---Indents the current line by `indent_width` pixels.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiindentindent_width)
 ---
 ---@param indent_width integer
 ---@return nil
 function imgui.indent(indent_width) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiunindent)
+---Unindents the current line by `indent_width` pixels.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiunindentindent_width)
 ---
 ---@param indent_width integer
 ---@return nil
 function imgui.unindent(indent_width) end
 
+---
+---Starts a tooltip window that will be drawn at the current cursor position.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_tooltip)
 ---
@@ -629,20 +651,26 @@ function imgui.unindent(indent_width) end
 function imgui.begin_tooltip() end
 
 ---
+---Ends the current tooltip window.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_tooltip)
 ---
 ---@return nil
 function imgui.end_tooltip() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_tooltip)
+---Sets the text for the current tooltip window.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_tooltiptext)
 ---
 ---@param text string
 ---@return nil
 function imgui.set_tooltip(text) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiopen_popup)
+---Opens a popup with the specified str_id and flags.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiopen_popupstr_id-flags)
 ---
 ---@param str_id string
 ---@param flags_obj? integer `ImGuiWindowFlags`
@@ -650,7 +678,9 @@ function imgui.set_tooltip(text) end
 function imgui.open_popup(str_id, flags_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_popup)
+---Begins a new popup with the specified str_id and flags.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_popupstr_id-flags)
 ---
 ---@param str_id string
 ---@param flags_obj? integer `ImGuiWindowFlags`
@@ -658,7 +688,9 @@ function imgui.open_popup(str_id, flags_obj) end
 function imgui.begin_popup(str_id, flags_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_popup_context_item)
+---Begins a new popup with the specified str_id and flags, anchored to the last item.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_popup_context_itemstr_id-flags)
 ---
 ---@param str_id string
 ---@param flags_obj? integer `ImGuiPopupFlags`
@@ -666,11 +698,15 @@ function imgui.begin_popup(str_id, flags_obj) end
 function imgui.begin_popup_context_item(str_id, flags_obj) end
 
 ---
+---Ends the current popup window.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_popup)
 ---
 ---@return nil
 function imgui.end_popup() end
 
+---
+---Closes the current popup window.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiclose_current_popup)
 ---
@@ -678,19 +714,25 @@ function imgui.end_popup() end
 function imgui.close_current_popup() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_popup_open)
+---Returns true if the popup with the specified str_id is open.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiis_popup_openstr_id)
 ---
 ---@param str_id string
 ---@return boolean
 function imgui.is_popup_open(str_id) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguicalc_text_size)
+---Calculates and returns the size of the specified text as a Vector2f.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguicalc_text_sizetext)
 ---
 ---@param text string
 ---@return Vector2f
 function imgui.calc_text_size(text) end
 
+---
+---Returns the size of the current window as a Vector2f.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_window_size)
 ---
@@ -698,13 +740,17 @@ function imgui.calc_text_size(text) end
 function imgui.get_window_size() end
 
 ---
+---Returns the position of the current window as a Vector2f.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_window_pos)
 ---
 ---@return Vector2f
 function imgui.get_window_pos() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_next_item_open)
+---Sets the open state of the next collapsing header or tree node to `is_open` based on the specified `condition`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_next_item_openis_open-condition)
 ---
 ---@param is_open boolean
 ---@param condition_obj? integer `ImGuiCond`
@@ -712,7 +758,9 @@ function imgui.get_window_pos() end
 function imgui.set_next_item_open(is_open, condition_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_list_box)
+---Begins a new list box with the specified label and size.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_list_boxlabel-size)
 ---
 ---@param label string
 ---@param size_obj Vector2f|number[]|Vector3f|Vector4f
@@ -720,11 +768,15 @@ function imgui.set_next_item_open(is_open, condition_obj) end
 function imgui.begin_list_box(label, size_obj) end
 
 ---
+---Ends the current list box.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_list_box)
 ---
 ---@return nil
 function imgui.end_list_box() end
 
+---
+---Begins a new menu bar.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_menu_bar)
 ---
@@ -732,11 +784,15 @@ function imgui.end_list_box() end
 function imgui.begin_menu_bar() end
 
 ---
+---Ends the current menu bar.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_menu_bar)
 ---
 ---@return nil
 function imgui.end_menu_bar() end
 
+---
+---Begins the main menu bar.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_main_menu_bar)
 ---
@@ -744,13 +800,17 @@ function imgui.end_menu_bar() end
 function imgui.begin_main_menu_bar() end
 
 ---
+---Ends the main menu bar.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_main_menu_bar)
 ---
 ---@return nil
 function imgui.end_main_menu_bar() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_menu)
+---Begins a new menu with the specified label. The menu will be disabled if enabled is false.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_menulabel-enabled)
 ---
 ---@param label string
 ---@param enabled_obj? boolean
@@ -758,13 +818,17 @@ function imgui.end_main_menu_bar() end
 function imgui.begin_menu(label, enabled_obj) end
 
 ---
+---Ends the current menu.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_menu)
 ---
 ---@return nil
 function imgui.end_menu() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguimenu_item)
+---Adds a menu item with the specified label, shortcut, selected state, and enabled state.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguimenu_itemlabel-shortcut-selected-enabled)
 ---
 ---@param label string
 ---@param shortcut_obj? string
@@ -774,18 +838,24 @@ function imgui.end_menu() end
 function imgui.menu_item(label, shortcut_obj, selected_obj, enabled_obj) end
 
 ---
+---Returns the size of the display as a `Vector2f.`
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_display_size)
 ---
 ---@return Vector2f
 function imgui.get_display_size() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_item_width)
+---Pushes the width of the next item to `item_width` pixels.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_item_widthitem_width)
 ---
 ---@param item_width number
 ---@return nil
 function imgui.push_item_width(item_width) end
 
+---
+---Pops the last item width off the stack.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipop_item_width)
 ---
@@ -793,24 +863,36 @@ function imgui.push_item_width(item_width) end
 function imgui.pop_item_width() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_next_item_width)
+---Sets the width of the next item to `item_width` pixels.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_next_item_widthitem_width)
 ---
 ---@param item_width number
 ---@return nil
 function imgui.set_next_item_width(item_width) end
 
 ---
+---Calculates and returns the current item width.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguicalc_item_width)
 ---
 ---@return number
 function imgui.calc_item_width() end
 
+---
+---Adds an item with the specified position and size to the current window.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiitem_addpos-size)
+---
 ---@param label string
 ---@param pos Vector2f|number[]|Vector3f|Vector4f
 ---@param size Vector2f|number[]|Vector3f|Vector4f
 ---@return boolean
 function imgui.item_add(label, pos, size) end
 
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiitem_sizepos-size)
+---
 ---@param pos Vector2f|number[]|Vector3f|Vector4f
 ---@param size Vector2f|number[]|Vector3f|Vector4f
 ---@param text_baseline_y? number
@@ -818,7 +900,9 @@ function imgui.item_add(label, pos, size) end
 function imgui.item_size(pos, size, text_baseline_y) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_color)
+---Pushes a new style color onto the style stack.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_colorstyle_color-color)
 ---
 ---@param style_color integer
 ---@param color_obj integer|Vector4f
@@ -826,14 +910,18 @@ function imgui.item_size(pos, size, text_baseline_y) end
 function imgui.push_style_color(style_color, color_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipop_style_color)
+---Pops count style colors off the style stack.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipop_style_colorcount)
 ---
 ---@param count_obj integer
 ---@return nil
 function imgui.pop_style_color(count_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_var)
+---Pushes a new style variable onto the style stack.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_varidx-value)
 ---
 ---@param idx integer
 ---@param value_obj number|Vector2f
@@ -841,12 +929,16 @@ function imgui.pop_style_color(count_obj) end
 function imgui.push_style_var(idx, value_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipop_style_var)
+---Pops count style variables off the style stack.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipop_style_varcount)
 ---
 ---@param count_obj integer
 ---@return nil
 function imgui.pop_style_var(count_obj) end
 
+---
+---Returns the current cursor position as a `Vector2f`.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_cursor_pos)
 ---
@@ -854,12 +946,16 @@ function imgui.pop_style_var(count_obj) end
 function imgui.get_cursor_pos() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_cursor_pos)
+---Sets the current cursor position to `pos`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_cursor_pospos)
 ---
 ---@param pos Vector2f|number[]|Vector3f|Vector4f
 ---@return nil
 function imgui.set_cursor_pos(pos) end
 
+---
+---Returns the initial cursor position as a `Vector2f`.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_cursor_start_pos)
 ---
@@ -867,18 +963,24 @@ function imgui.set_cursor_pos(pos) end
 function imgui.get_cursor_start_pos() end
 
 ---
+---Returns the current cursor position in screen coordinates as a `Vector2f`.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_cursor_screen_pos)
 ---
 ---@return Vector2f
 function imgui.get_cursor_screen_pos() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_cursor_screen_pos)
+---Sets the current cursor position in screen coordinates to `pos`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_cursor_screen_pospos)
 ---
 ---@param pos Vector2f|number[]|Vector3f|Vector4f
 ---@return nil
 function imgui.set_cursor_screen_pos(pos) end
 
+---
+---Sets the default focus to the next widget.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_item_default_focus)
 ---
@@ -892,19 +994,51 @@ function imgui.set_clipboard(data) end
 ---@return string
 function imgui.get_clipboard() end
 
+---
+---`progress` is a float between 0 and 1.
+---
+---`size` is a `Vector2f` or a size 2 array.
+---
+---`overlay` is a string on top of the progress bar.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiprogress_barprogress-size-overlay)
+---
 ---@param progress number
 ---@param size Vector2f|number[]|Vector3f|Vector4f
 ---@param overlay string
 ---@return nil
 function imgui.progress_bar(progress, size, overlay) end
 
+---
+---Clears the current window's draw list path.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguidraw_list_path_clear)
+---
 ---@return nil
 function imgui.draw_list_path_clear() end
 
+---
+---Adds a line to the current window's draw list path given the specified `pos`
+---
+---- `pos` is a `Vector2f` or a size 2 array.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguidraw_list_path_line_topos)
+---
 ---@param pos_obj Vector2f|number[]|Vector3f|Vector4f
 ---@return nil
 function imgui.draw_list_path_line_to(pos_obj) end
 
+---
+---Strokes the current window's draw list path with the specified `color`, `closed` state, and `thickness`.
+---
+---- `color` is an integer color in the form ARGB.
+---
+---- `closed` is a bool.
+---
+---- `thickness` is a float.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguidraw_list_path_strokecolor-closed-thickness)
+---
 ---@param color integer
 ---@param closed? boolean
 ---@param thickness? number
@@ -912,7 +1046,19 @@ function imgui.draw_list_path_line_to(pos_obj) end
 function imgui.draw_list_path_stroke(color, closed, thickness) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_table)
+---Begins a new table with the specified `str_id`, `column` count, `flags`, `outer_size`, and `inner_width`.
+---
+---- `str_id` is a string.
+---
+---- `column` is an integer.
+---
+---- `flags` is an optional `ImGuiTableFlags` enum.
+---
+---- `outer_size` is a `Vector2f` or a size 2 array.
+---
+---- `inner_width` is an optional float.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_tablestr_id-column-flags-outer_size-inner_width)
 ---
 ---@param str_id string
 ---@param column integer
@@ -923,13 +1069,21 @@ function imgui.draw_list_path_stroke(color, closed, thickness) end
 function imgui.begin_table(str_id, column, flags_obj, outer_size_obj, inner_width_obj) end
 
 ---
+---Ends the current table.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_table)
 ---
 ---@return nil
 function imgui.end_table() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_next_row)
+---Begins a new row in the current table with the specified `row_flags` and `min_row_height`.
+---
+---- `row_flags` is an optional `ImGuiTableRowFlags` enum.
+---
+---- `min_row_height` is an optional float.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_next_rowrow_flags-min_row_height)
 ---
 ---@param row_flags? integer `ImGuiTableRowFlags`
 ---@param min_row_height? number
@@ -937,20 +1091,26 @@ function imgui.end_table() end
 function imgui.table_next_row(row_flags, min_row_height) end
 
 ---
+---Advances to the next column in the current table.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_next_column)
 ---
 ---@return boolean
 function imgui.table_next_column() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_set_column_index)
+---Sets the current column index to column_index.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_set_column_indexcolumn_index)
 ---
 ---@param column_index integer
 ---@return boolean
 function imgui.table_set_column_index(column_index) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_setup_column)
+---Sets up a column in the current table with the specified label, flags, init_width_or_weight, and user_id.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_setup_columnlabel-flags-init_width_or_weight-user_id)
 ---
 ---@param label string
 ---@param flags_obj? ImGuiTableColumnFlags
@@ -960,7 +1120,9 @@ function imgui.table_set_column_index(column_index) end
 function imgui.table_setup_column(label, flags_obj, init_width_or_weight_obj, user_id_obj) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_setup_scroll_freeze)
+---Sets up a scrolling region in the current table with cols columns and rows rows frozen.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_setup_scroll_freezecols-rows)
 ---
 ---@param cols integer
 ---@param rows integer
@@ -968,18 +1130,24 @@ function imgui.table_setup_column(label, flags_obj, init_width_or_weight_obj, us
 function imgui.table_setup_scroll_freeze(cols, rows) end
 
 ---
+---Submits a header row in the current table.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_headers_row)
 ---
 ---@return nil
 function imgui.table_headers_row() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_header)
+---Submits a header cell with the specified label in the current table.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_headerlabel)
 ---
 ---@param label string
 ---@return nil
 function imgui.table_header(label) end
 
+---
+---Returns the sort specifications for the current table.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_sort_specs)
 ---
@@ -987,11 +1155,15 @@ function imgui.table_header(label) end
 function imgui.table_get_sort_specs() end
 
 ---
+---Returns the number of columns in the current table.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_count)
 ---
 ---@return integer
 function imgui.table_get_column_count() end
 
+---
+---Returns the current column index.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_index)
 ---
@@ -999,27 +1171,35 @@ function imgui.table_get_column_count() end
 function imgui.table_get_column_index() end
 
 ---
+---Returns the current row index.
+---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_row_index)
 ---
 ---@return integer
 function imgui.table_get_row_index() end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_name)
+---Returns the name of the specified `column` in the current table.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_namecolumn)
 ---
 ---@param column integer
 ---@return string
 function imgui.table_get_column_name(column) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_flags)
+---Returns the flags of the specified `column` in the current table.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_get_column_flagscolumn)
 ---
 ---@param column integer
 ---@return ImGuiTableColumnFlags
 function imgui.table_get_column_flags(column) end
 
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_set_bg_color)
+---Sets the background color of the specified `target` in the current table with the given `color` and `column` index.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitable_set_bg_colortarget-color-column)
 ---
 ---@param target integer `ImGuiTableBgTarget`
 ---@param color integer

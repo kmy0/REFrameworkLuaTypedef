@@ -55,3 +55,61 @@ function reframework:is_key_down(key) end
 
 ---@return integer?
 function reframework:get_first_key_down() end
+
+---
+---Returns the branch name of the REFramework build.
+---
+---ex: "master"
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_branch)
+---
+---@return string
+function reframework:get_branch() end
+
+---
+---Returns the total number of commits on the current branch of the REFramework build.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_commit_count)
+---
+---@return integer
+function reframework:get_commit_count() end
+
+---
+---Returns the last tag of the REFramework build on its current branch.
+---
+---ex: "v1.5.4"
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_tag)
+---
+---@return string
+function reframework:get_tag() end
+
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_tag_long)
+---
+---@return string
+function reframework:get_tag_long() end
+
+---
+---Returns the number of commits past the last tag.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_commits_past_tag)
+---
+---@return string
+function reframework:get_commits_past_tag() end
+
+---
+---Returns the date that REFramework was built (mm/dd/yyyy).
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_build_date)
+---
+---@return string
+function reframework:get_build_date() end
+
+---
+---Returns the time that REFramework was built.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/reframework.html#reframeworkget_build_time)
+---
+---@return string
+function reframework:get_build_time() end
