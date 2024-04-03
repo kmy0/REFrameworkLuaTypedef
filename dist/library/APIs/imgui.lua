@@ -13,15 +13,18 @@ imgui = {}
 
 
 ---
----Draws a button with `label` text.
+---Draws a button with `label` text, and optional `size`.
+---
+---`size` is a Vector2f or a size 2 array.
 ---
 ---Returns `true` when the user presses the button.
 ---
----[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibuttonlabel)
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibuttonlabel-size)
 ---
 ---@param label string
+---@param size_object? Vector2f|number[]|Vector3f|Vector4f
 ---@return boolean
-function imgui.button(label) end
+function imgui.button(label, size_object) end
 
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguismall_buttonlabel)
@@ -36,7 +39,7 @@ function imgui.small_button(label) end
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiinvisible_buttonid-size-flags)
 ---
 ---@param id string
----@param size_object Vector2f|number[]|Vector3f|Vector4f
+---@param size_object? Vector2f|number[]|Vector3f|Vector4f
 ---@param flags_object? integer `ImGuiButtonFlags`
 ---@return boolean
 function imgui.invisible_button(id, size_object, flags_object) end
@@ -352,6 +355,23 @@ function imgui.begin_rect() end
 ---@param rounding_obj number
 ---@return nil
 function imgui.end_rect(additional_size_obj, rounding_obj) end
+
+---
+---These two methods will disable and darken elements in between it.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguibegin_disableddisabledtrue)
+---
+---@param disabled_obj? boolean
+---@return nil
+function imgui.begin_disabled(disabled_obj) end
+
+---
+---These two methods will disable and darken elements in between it.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiend_disabled)
+---
+---@return nil
+function imgui.end_disabled() end
 
 ---@return nil
 function imgui.separator() end
@@ -1044,6 +1064,94 @@ function imgui.draw_list_path_line_to(pos_obj) end
 ---@param thickness? number
 ---@return nil
 function imgui.draw_list_path_stroke(color, closed, thickness) end
+
+---
+---Returns the horizontal scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_scroll_x)
+---
+---@return number
+function imgui.get_scroll_x() end
+
+---
+---Returns the vertical scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_scroll_y)
+---
+---@return number
+function imgui.get_scroll_y() end
+
+---
+---Sets the horizontal scroll position to `scroll_x`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_xscroll_x)
+---
+---@param scroll_x number
+---@return nil
+function imgui.set_scroll_x(scroll_x) end
+
+---
+---Sets the vertical scroll position to `scroll_y`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_yscroll_y)
+---
+---@param scroll_y number
+---@return nil
+function imgui.set_scroll_y(scroll_y) end
+
+---
+---Returns the maximum horizontal scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_scroll_max_x)
+---
+---@return number
+function imgui.get_scroll_max_x() end
+
+---
+---Returns the maximum vertical scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiget_scroll_max_y)
+---
+---@return number
+function imgui.get_scroll_max_y() end
+
+---
+---Centers the horizontal scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_here_xcenter_x_ratio)
+---
+---@param center_x_ratio? number
+---@return nil
+function imgui.set_scroll_here_x(center_x_ratio) end
+
+---
+---Centers the vertical scroll position.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_here_ycenter_y_ratio)
+---
+---@param center_y_ratio? number
+---@return nil
+function imgui.set_scroll_here_y(center_y_ratio) end
+
+---
+---Sets the horizontal scroll position from the specified `local_x` and `center_x_ratio`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_from_pos_xlocal_x-center_x_ratio)
+---
+---@param local_x number
+---@param center_x_ratio? number
+---@return nil
+function imgui.set_scroll_from_pos_x(local_x, center_x_ratio) end
+
+---
+---Sets the vertical scroll position from the specified `local_y` and `center_y_ratio`.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiset_scroll_from_pos_ylocal_y-center_y_ratio)
+---
+---@param local_y number
+---@param center_y_ratio? number
+---@return nil
+function imgui.set_scroll_from_pos_y(local_y, center_y_ratio) end
 
 ---
 ---Begins a new table with the specified `str_id`, `column` count, `flags`, `outer_size`, and `inner_width`.
