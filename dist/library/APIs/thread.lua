@@ -1,6 +1,5 @@
 ---@meta
 
-
 ---
 ---The `thread` API is for storing thread-specific data and querying information about the current thread.
 ---
@@ -10,7 +9,6 @@
 ---
 ---@class thread
 thread = {}
-
 
 ---
 ---Returns the hash of the ID of the current thread.
@@ -39,6 +37,6 @@ function thread.get_id() end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/thread.html#threadget_hook_storage)
 ---
----@param hash integer
+---@param hash integer?
 ---@return table?
 function thread.get_hook_storage(hash) end
