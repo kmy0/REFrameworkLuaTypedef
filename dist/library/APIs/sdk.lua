@@ -1,6 +1,5 @@
 ---@meta
 
-
 ---
 ---Main starting point for most things.
 ---
@@ -8,7 +7,6 @@
 ---
 ---@class sdk
 sdk = {}
-
 
 ---
 ---Returns the version of the type database. A good approximation of the version of the RE Engine the game is running on.
@@ -310,7 +308,7 @@ function sdk.get_primary_camera() end
 ---
 ---@param fn REMethodDefinition
 ---@param pre_cb fun(args?: userdata[]): PreHookResult?
----@param post_cb fun(retval?: userdata): userdata?
+---@param post_cb (fun(retval?: userdata): userdata?)?
 ---@param ignore_jmp_object? boolean
 ---@return nil
 function sdk.hook(fn, pre_cb, post_cb, ignore_jmp_object) end
@@ -334,8 +332,8 @@ function sdk.hook_vtable(obj, fn, pre_cb, post_cb) end
 ---
 ---@enum PreHookResult
 sdk.PreHookResult = {
-    CALL_ORIGINAL = 0,
-    SKIP_ORIGINAL = 1
+	CALL_ORIGINAL = 0,
+	SKIP_ORIGINAL = 1,
 }
 
 ---
