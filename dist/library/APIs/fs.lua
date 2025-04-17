@@ -1,6 +1,5 @@
 ---@meta
 
-
 ---
 ---This is the filesystem API. ~~REFramework purposefully restricts scripts from the usual Lua `io` API so that scripts do not have unrestricted access to a users system.~~ Instead, this API focuses specifically on the `reframework/data` subdirectory.
 ---
@@ -13,14 +12,13 @@
 ---@class fs
 fs = {}
 
-
 ---
 ---Returns a table of file paths that match the `filter`. `filter` should be a regex string for the files you wish to match.
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/fs.html#fsglobfilter)
 ---
 ---@param filter string
----@param modifier string
+---@param modifier string?
 ---@return string[]
 function fs.glob(filter, modifier) end
 
