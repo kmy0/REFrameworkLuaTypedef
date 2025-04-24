@@ -1,6 +1,5 @@
 ---@meta
 
-
 ---
 ---Bindings for ImGui. Can be used in the `re.on_draw_ui` callback.
 ---
@@ -10,7 +9,6 @@
 ---
 ---@class imgui
 imgui = {}
-
 
 ---
 ---Draws a button with `label` text, and optional `size`.
@@ -65,10 +63,9 @@ function imgui.arrow_button(str_id, dir) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguicombolabel-selection-values)
 ---
----@param label string
----@param selection integer|string
----@param values { [integer|string]: string }
----@return boolean, integer|string
+
+---@overload fun(label: string, selection: integer, values: string[]): boolean, integer
+---@overload fun(label: string, selection: string, values: { [string]: string }): boolean, string
 function imgui.combo(label, selection, values) end
 
 ---
@@ -1318,78 +1315,78 @@ function imgui.table_set_bg_color(target, color, column) end
 ---@enum ImGuizmoOperation
 imgui.ImGuizmoOperation = {
     TRANSLATE = 1 << 0 | 1 << 1 | 1 << 2,
-    ROTATE    = 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6,
-    SCALE     = 1 << 7 | 1 << 8 | 1 << 9,
-    SCALEU    = 1 << 11 | 1 << 12 | 1 << 13,
-    UNIVERSAL = 1 << 0 | 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6 | 1 << 11 | 1 << 12 | 1 << 13
+    ROTATE = 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6,
+    SCALE = 1 << 7 | 1 << 8 | 1 << 9,
+    SCALEU = 1 << 11 | 1 << 12 | 1 << 13,
+    UNIVERSAL = 1 << 0 | 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6 | 1 << 11 | 1 << 12 | 1 << 13,
 }
 
 ---@enum ImGuizmoMode
 imgui.ImGuizmoMode = {
     WORLD = 1,
-    LOCAL = 0
+    LOCAL = 0,
 }
 
 ---@enum ImGuiTableFlags
 imgui.TableFlags = {
-    None                       = 0,
-    Resizable                  = 1 << 0,
-    Reorderable                = 1 << 1,
-    Hideable                   = 1 << 2,
-    Sortable                   = 1 << 3,
-    NoSavedSettings            = 1 << 4,
-    ContextMenuInBody          = 1 << 5,
-    RowBg                      = 1 << 6,
-    BordersInnerH              = 1 << 7,
-    BordersOuterH              = 1 << 8,
-    BordersInnerV              = 1 << 9,
-    BordersOuterV              = 1 << 10,
-    BordersH                   = 1 << 7 | 1 << 8,
-    BordersV                   = 1 << 9 | 1 << 10,
-    BordersInner               = 1 << 9 | 1 << 7,
-    BordersOuter               = 1 << 10 | 1 << 8,
-    Borders                    = 1 << 9 | 1 << 7 | 1 << 10 | 1 << 8,
-    NoBordersInBody            = 1 << 11,
+    None = 0,
+    Resizable = 1 << 0,
+    Reorderable = 1 << 1,
+    Hideable = 1 << 2,
+    Sortable = 1 << 3,
+    NoSavedSettings = 1 << 4,
+    ContextMenuInBody = 1 << 5,
+    RowBg = 1 << 6,
+    BordersInnerH = 1 << 7,
+    BordersOuterH = 1 << 8,
+    BordersInnerV = 1 << 9,
+    BordersOuterV = 1 << 10,
+    BordersH = 1 << 7 | 1 << 8,
+    BordersV = 1 << 9 | 1 << 10,
+    BordersInner = 1 << 9 | 1 << 7,
+    BordersOuter = 1 << 10 | 1 << 8,
+    Borders = 1 << 9 | 1 << 7 | 1 << 10 | 1 << 8,
+    NoBordersInBody = 1 << 11,
     NoBordersInBodyUntilResize = 1 << 12,
-    SizingFixedFit             = 1 << 13,
-    SizingFixedSame            = 2 << 13,
-    SizingStretchProp          = 3 << 13,
-    SizingStretchSame          = 4 << 13,
-    NoHostExtendX              = 1 << 16,
-    NoHostExtendY              = 1 << 17,
-    NoKeepColumnsVisible       = 1 << 18,
-    PreciseWidths              = 1 << 19,
-    NoClip                     = 1 << 20,
-    PadOuterX                  = 1 << 21,
-    NoPadOuterX                = 1 << 22,
-    NoPadInnerX                = 1 << 23,
-    ScrollX                    = 1 << 24,
-    ScrollY                    = 1 << 25,
-    SortMulti                  = 1 << 26,
-    SortTristate               = 1 << 27
+    SizingFixedFit = 1 << 13,
+    SizingFixedSame = 2 << 13,
+    SizingStretchProp = 3 << 13,
+    SizingStretchSame = 4 << 13,
+    NoHostExtendX = 1 << 16,
+    NoHostExtendY = 1 << 17,
+    NoKeepColumnsVisible = 1 << 18,
+    PreciseWidths = 1 << 19,
+    NoClip = 1 << 20,
+    PadOuterX = 1 << 21,
+    NoPadOuterX = 1 << 22,
+    NoPadInnerX = 1 << 23,
+    ScrollX = 1 << 24,
+    ScrollY = 1 << 25,
+    SortMulti = 1 << 26,
+    SortTristate = 1 << 27,
 }
 
 ---@enum ImGuiTableColumnFlags
 imgui.ColumnFlags = {
-    None                 = 0,
-    DefaultHide          = 1 << 1,
-    DefaultSort          = 1 << 2,
-    WidthStretch         = 1 << 3,
-    WidthFixed           = 1 << 4,
-    NoResize             = 1 << 5,
-    NoReorder            = 1 << 6,
-    NoHide               = 1 << 7,
-    NoClip               = 1 << 8,
-    NoSort               = 1 << 9,
-    NoSortAscending      = 1 << 10,
-    NoSortDescending     = 1 << 11,
-    NoHeaderWidth        = 1 << 13,
-    PreferSortAscending  = 1 << 14,
+    None = 0,
+    DefaultHide = 1 << 1,
+    DefaultSort = 1 << 2,
+    WidthStretch = 1 << 3,
+    WidthFixed = 1 << 4,
+    NoResize = 1 << 5,
+    NoReorder = 1 << 6,
+    NoHide = 1 << 7,
+    NoClip = 1 << 8,
+    NoSort = 1 << 9,
+    NoSortAscending = 1 << 10,
+    NoSortDescending = 1 << 11,
+    NoHeaderWidth = 1 << 13,
+    PreferSortAscending = 1 << 14,
     PreferSortDescending = 1 << 15,
-    IndentEnable         = 1 << 16,
-    IndentDisable        = 1 << 17,
-    IsEnabled            = 1 << 24,
-    IsVisible            = 1 << 25,
-    IsSorted             = 1 << 26,
-    IsHovered            = 1 << 27
+    IndentEnable = 1 << 16,
+    IndentDisable = 1 << 17,
+    IsEnabled = 1 << 24,
+    IsVisible = 1 << 25,
+    IsSorted = 1 << 26,
+    IsHovered = 1 << 27,
 }
