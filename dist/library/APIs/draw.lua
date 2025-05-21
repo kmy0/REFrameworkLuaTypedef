@@ -1,6 +1,5 @@
 ---@meta
 
-
 ---
 ---Methods to be used on `re.on_frame` or `re.on_draw_ui`.
 ---
@@ -10,7 +9,6 @@
 ---
 ---@class draw
 draw = {}
-
 
 ---
 ---Returns an optional `Vector2f` corresponding to the 2D screen position. Returns `nil` if `world_pos` is not visible.
@@ -38,7 +36,7 @@ function draw.world_text(text, world_pos_object, color) end
 ---@param y number
 ---@param color integer
 ---@return nil
-function draw.world_text(text, x, y, color) end
+function draw.text(text, x, y, color) end
 
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/draw.html#drawfilled_rectx-y-w-h-color)
