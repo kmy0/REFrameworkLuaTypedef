@@ -397,7 +397,7 @@ function imgui.collapsing_header(name) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguiload_fontfilepath-size-ranges)
 ---
----@param filepath_obj string
+---@param filepath_obj string?
 ---@param size integer
 ---@param ranges? integer[]
 ---@return integer
