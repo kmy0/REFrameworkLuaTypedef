@@ -1425,3 +1425,37 @@ imgui.StyleVar = {
     SeparatorTextAlign = 31,
     SeparatorTextPadding = 32,
 }
+---@enum ImGuiWindowFlags
+imgui.WindowFlags = {
+    None = 0,
+    NoTitleBar = 1 << 0,
+    NoResize = 1 << 1,
+    NoMove = 1 << 2,
+    NoScrollbar = 1 << 3,
+    NoScrollWithMouse = 1 << 4,
+    NoCollapse = 1 << 5,
+    AlwaysAutoResize = 1 << 6,
+    NoBackground = 1 << 7,
+    NoSavedSettings = 1 << 8,
+    NoMouseInputs = 1 << 9,
+    MenuBar = 1 << 10,
+    HorizontalScrollbar = 1 << 11,
+    NoFocusOnAppearing = 1 << 12,
+    NoBringToFrontOnFocus = 1 << 13,
+    AlwaysVerticalScrollbar = 1 << 14,
+    AlwaysHorizontalScrollbar = 1 << 15,
+    NoNavInputs = 1 << 16,
+    NoNavFocus = 1 << 17,
+    UnsavedDocument = 1 << 18,
+}
+---@diagnostic disable-next-line: inject-field
+imgui.WindowFlags.NoNav = imgui.WindowFlags.NoNavInputs | imgui.WindowFlags.NoNavFocus
+---@diagnostic disable-next-line: inject-field
+imgui.WindowFlags.NoDecoration = imgui.WindowFlags.NoTitleBar
+    | imgui.WindowFlags.NoResize
+    | imgui.WindowFlags.NoScrollbar
+    | imgui.WindowFlags.NoCollapse
+---@diagnostic disable-next-line: inject-field
+imgui.WindowFlags.NoInputs = imgui.WindowFlags.NoMouseInputs
+    | imgui.WindowFlags.NoNavInputs
+    | imgui.WindowFlags.NoNavFocus
