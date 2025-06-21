@@ -1459,3 +1459,12 @@ imgui.WindowFlags.NoDecoration = imgui.WindowFlags.NoTitleBar
 imgui.WindowFlags.NoInputs = imgui.WindowFlags.NoMouseInputs
     | imgui.WindowFlags.NoNavInputs
     | imgui.WindowFlags.NoNavFocus
+
+---@enum ImguiCond
+imgui.Cond = {
+    None = 0,
+    Always = 1 << 0,
+    Once = 1 << 1,
+    FirstUseEver = 1 << 2,
+    Appearing = 1 << 3,
+}
