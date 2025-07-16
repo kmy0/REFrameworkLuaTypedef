@@ -921,7 +921,7 @@ function imgui.item_size(pos, size, text_baseline_y) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguipush_style_colorstyle_color-color)
 ---
----@param style_color integer
+---@param style_color integer 'ImGuiCol'
 ---@param color_obj integer|Vector4f
 ---@return nil
 function imgui.push_style_color(style_color, color_obj) end
@@ -1497,4 +1497,63 @@ imgui.InputTextFlags = {
     CallbackCharFilter = 1 << 20,
     CallbackResize = 1 << 21,
     CallbackEdit = 1 << 22,
+}
+
+---@enum ImGuiCol
+imgui.Col = {
+    ImGuiCol_Text = 0,
+    ImGuiCol_TextDisabled = 1,
+    ImGuiCol_WindowBg = 2,
+    ImGuiCol_ChildBg = 3,
+    ImGuiCol_PopupBg = 4,
+    ImGuiCol_Border = 4,
+    ImGuiCol_BorderShadow = 5,
+    ImGuiCol_FrameBg = 6,
+    ImGuiCol_FrameBgHovered = 7,
+    ImGuiCol_FrameBgActive = 8,
+    ImGuiCol_TitleBg = 9,
+    ImGuiCol_TitleBgActive = 10,
+    ImGuiCol_TitleBgCollapsed = 11,
+    ImGuiCol_MenuBarBg = 12,
+    ImGuiCol_ScrollbarBg = 13,
+    ImGuiCol_ScrollbarGrab = 14,
+    ImGuiCol_ScrollbarGrabHovered = 15,
+    ImGuiCol_ScrollbarGrabActive = 16,
+    ImGuiCol_CheckMark = 17,
+    ImGuiCol_SliderGrab = 18,
+    ImGuiCol_SliderGrabActive = 19,
+    ImGuiCol_Button = 20,
+    ImGuiCol_ButtonHovered = 21,
+    ImGuiCol_ButtonActive = 22,
+    ImGuiCol_Header = 23,
+    ImGuiCol_HeaderHovered = 24,
+    ImGuiCol_HeaderActive = 25,
+    ImGuiCol_Separator = 26,
+    ImGuiCol_SeparatorHovered = 27,
+    ImGuiCol_SeparatorActive = 28,
+    ImGuiCol_ResizeGrip = 29,
+    ImGuiCol_ResizeGripHovered = 30,
+    ImGuiCol_ResizeGripActive = 31,
+    ImGuiCol_TabHovered = 32,
+    ImGuiCol_Tab = 33,
+    ImGuiCol_TabSelected = 34,
+    ImGuiCol_TabSelectedOverline = 35,
+    ImGuiCol_TabDimmed = 36,
+    ImGuiCol_TabDimmedSelected = 37,
+    ImGuiCol_TabDimmedSelectedOverline = 38,
+    ImGuiCol_PlotLines = 39,
+    ImGuiCol_PlotLinesHovered = 40,
+    ImGuiCol_PlotHistogram = 41,
+    ImGuiCol_PlotHistogramHovered = 42,
+    ImGuiCol_TableHeaderBg = 43,
+    ImGuiCol_TableBorderStrong = 44,
+    ImGuiCol_TableBorderLight = 45,
+    ImGuiCol_TableRowBg = 46,
+    ImGuiCol_TableRowBgAlt = 47,
+    ImGuiCol_TextSelectedBg = 48,
+    ImGuiCol_DragDropTarget = 49,
+    ImGuiCol_NavHighlight = 50,
+    ImGuiCol_NavWindowingHighlight = 51,
+    ImGuiCol_NavWindowingDimBg = 52,
+    ImGuiCol_ModalWindowDimBg = 53,
 }
