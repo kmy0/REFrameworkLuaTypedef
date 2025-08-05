@@ -192,7 +192,7 @@ function imgui.input_text_multiline(label, v, size_obj, flags) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitexttext)
 ---
----@param text string
+---@param text string | number?
 ---@return nil
 function imgui.text(text) end
 
@@ -203,7 +203,7 @@ function imgui.text(text) end
 ---
 ---[View documents](https://cursey.github.io/reframework-book/api/imgui.html#imguitext_coloredtext-color)
 ---
----@param text string
+---@param text string | number?
 ---@param color integer
 ---@return nil
 function imgui.text_colored(text, color) end
