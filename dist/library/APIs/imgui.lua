@@ -1318,7 +1318,16 @@ imgui.ImGuizmoOperation = {
     ROTATE = 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6,
     SCALE = 1 << 7 | 1 << 8 | 1 << 9,
     SCALEU = 1 << 11 | 1 << 12 | 1 << 13,
-    UNIVERSAL = 1 << 0 | 1 << 1 | 1 << 2 | 1 << 3 | 1 << 4 | 1 << 5 | 1 << 6 | 1 << 11 | 1 << 12 | 1 << 13,
+    UNIVERSAL = 1 << 0
+        | 1 << 1
+        | 1 << 2
+        | 1 << 3
+        | 1 << 4
+        | 1 << 5
+        | 1 << 6
+        | 1 << 11
+        | 1 << 12
+        | 1 << 13,
 }
 
 ---@enum ImGuizmoMode
@@ -1462,7 +1471,7 @@ imgui.WindowFlags.NoInputs = imgui.WindowFlags.NoMouseInputs
     | imgui.WindowFlags.NoNavInputs
     | imgui.WindowFlags.NoNavFocus
 
----@enum ImguiCond
+---@enum ImGuiCond
 imgui.Cond = {
     None = 0,
     Always = 1 << 0,
@@ -1470,7 +1479,6 @@ imgui.Cond = {
     FirstUseEver = 1 << 2,
     Appearing = 1 << 3,
 }
-
 ---@enum ImGuiInputTextFlags
 imgui.InputTextFlags = {
     None = 0,
@@ -1556,4 +1564,175 @@ imgui.Col = {
     ImGuiCol_NavWindowingHighlight = 52,
     ImGuiCol_NavWindowingDimBg = 53,
     ImGuiCol_ModalWindowDimBg = 54,
+}
+
+---@enum ImGuiKey
+imgui.ImGuiKey = {
+    -- Special
+    Key_None = 0,
+
+    -- Named keys (>= 512)
+    Key_Tab = 512,
+    Key_LeftArrow = 513,
+    Key_RightArrow = 514,
+    Key_UpArrow = 515,
+    Key_DownArrow = 516,
+    Key_PageUp = 517,
+    Key_PageDown = 518,
+    Key_Home = 519,
+    Key_End = 520,
+    Key_Insert = 521,
+    Key_Delete = 522,
+    Key_Backspace = 523,
+    Key_Space = 524,
+    Key_Enter = 525,
+    Key_Escape = 526,
+    Key_LeftCtrl = 527,
+    Key_LeftShift = 528,
+    Key_LeftAlt = 529,
+    Key_LeftSuper = 530,
+    Key_RightCtrl = 531,
+    Key_RightShift = 532,
+    Key_RightAlt = 533,
+    Key_RightSuper = 534,
+    Key_Menu = 535,
+    Key_0 = 536,
+    Key_1 = 537,
+    Key_2 = 538,
+    Key_3 = 539,
+    Key_4 = 540,
+    Key_5 = 541,
+    Key_6 = 542,
+    Key_7 = 543,
+    Key_8 = 544,
+    Key_9 = 545,
+    Key_A = 546,
+    Key_B = 547,
+    Key_C = 548,
+    Key_D = 549,
+    Key_E = 550,
+    Key_F = 551,
+    Key_G = 552,
+    Key_H = 553,
+    Key_I = 554,
+    Key_J = 555,
+    Key_K = 556,
+    Key_L = 557,
+    Key_M = 558,
+    Key_N = 559,
+    Key_O = 560,
+    Key_P = 561,
+    Key_Q = 562,
+    Key_R = 563,
+    Key_S = 564,
+    Key_T = 565,
+    Key_U = 566,
+    Key_V = 567,
+    Key_W = 568,
+    Key_X = 569,
+    Key_Y = 570,
+    Key_Z = 571,
+    Key_F1 = 572,
+    Key_F2 = 573,
+    Key_F3 = 574,
+    Key_F4 = 575,
+    Key_F5 = 576,
+    Key_F6 = 577,
+    Key_F7 = 578,
+    Key_F8 = 579,
+    Key_F9 = 580,
+    Key_F10 = 581,
+    Key_F11 = 582,
+    Key_F12 = 583,
+    Key_F13 = 584,
+    Key_F14 = 585,
+    Key_F15 = 586,
+    Key_F16 = 587,
+    Key_F17 = 588,
+    Key_F18 = 589,
+    Key_F19 = 590,
+    Key_F20 = 591,
+    Key_F21 = 592,
+    Key_F22 = 593,
+    Key_F23 = 594,
+    Key_F24 = 595,
+    Key_Apostrophe = 596,
+    Key_Comma = 597,
+    Key_Minus = 598,
+    Key_Period = 599,
+    Key_Slash = 600,
+    Key_Semicolon = 601,
+    Key_Equal = 602,
+    Key_LeftBracket = 603,
+    Key_Backslash = 604,
+    Key_RightBracket = 605,
+    Key_GraveAccent = 606,
+    Key_CapsLock = 607,
+    Key_ScrollLock = 608,
+    Key_NumLock = 609,
+    Key_PrintScreen = 610,
+    Key_Pause = 611,
+    Key_Keypad0 = 612,
+    Key_Keypad1 = 613,
+    Key_Keypad2 = 614,
+    Key_Keypad3 = 615,
+    Key_Keypad4 = 616,
+    Key_Keypad5 = 617,
+    Key_Keypad6 = 618,
+    Key_Keypad7 = 619,
+    Key_Keypad8 = 620,
+    Key_Keypad9 = 621,
+    Key_KeypadDecimal = 622,
+    Key_KeypadDivide = 623,
+    Key_KeypadMultiply = 624,
+    Key_KeypadSubtract = 625,
+    Key_KeypadAdd = 626,
+    Key_KeypadEnter = 627,
+    Key_KeypadEqual = 628,
+    Key_AppBack = 629,
+    Key_AppForward = 630,
+    Key_Oem102 = 631,
+
+    -- Gamepad
+    Key_GamepadStart = 632,
+    Key_GamepadBack = 633,
+    Key_GamepadFaceLeft = 634,
+    Key_GamepadFaceRight = 635,
+    Key_GamepadFaceUp = 636,
+    Key_GamepadFaceDown = 637,
+    Key_GamepadDpadLeft = 638,
+    Key_GamepadDpadRight = 639,
+    Key_GamepadDpadUp = 640,
+    Key_GamepadDpadDown = 641,
+    Key_GamepadL1 = 642,
+    Key_GamepadR1 = 643,
+    Key_GamepadL2 = 644,
+    Key_GamepadR2 = 645,
+    Key_GamepadL3 = 646,
+    Key_GamepadR3 = 647,
+    Key_GamepadLStickLeft = 648,
+    Key_GamepadLStickRight = 649,
+    Key_GamepadLStickUp = 650,
+    Key_GamepadLStickDown = 651,
+    Key_GamepadRStickLeft = 652,
+    Key_GamepadRStickRight = 653,
+    Key_GamepadRStickUp = 654,
+    Key_GamepadRStickDown = 655,
+
+    -- Mouse (as keys)
+    Key_MouseLeft = 656,
+    Key_MouseRight = 657,
+    Key_MouseMiddle = 658,
+    Key_MouseX1 = 659,
+    Key_MouseX2 = 660,
+    Key_MouseWheelX = 661,
+    Key_MouseWheelY = 662,
+
+    -- Modifiers
+    Mod_None = 0,
+    Mod_Ctrl = 0x1000, -- 4096
+    Mod_Shift = 0x2000, -- 8192
+    Mod_Alt = 0x4000, -- 16384
+    Mod_Super = 0x8000, -- 32768
+    Mod_Mask_ = 0xF000, -- 61440
 }
