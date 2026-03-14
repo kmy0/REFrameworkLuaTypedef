@@ -9,6 +9,8 @@
 ---
 ---@class imgui
 imgui = {}
+---@class ImDrawList
+local ImDrawList = {}
 
 ---
 ---Draws a button with `label` text, and optional `size`.
@@ -1034,6 +1036,15 @@ function imgui.progress_bar(progress, size, overlay) end
 ---@return nil
 function imgui.draw_list_path_clear() end
 
+---@return ImDrawList
+function imgui.get_window_draw_list() end
+
+---@return ImDrawList
+function imgui.get_background_draw_list() end
+
+---@return ImDrawList
+function imgui.get_foreground_draw_list() end
+
 ---
 ---Adds a line to the current window's draw list path given the specified `pos`
 ---
@@ -1311,6 +1322,222 @@ function imgui.table_get_column_flags(column) end
 ---@param column integer
 ---@return nil
 function imgui.table_set_bg_color(target, color, column) end
+
+---@param min Vector2f|number[]
+---@param max Vector2f|number[]
+---@param intersect_with_current_clip_rect boolean
+---@return nil
+function ImDrawList:push_clip_rect(min, max, intersect_with_current_clip_rect) end
+
+---@return nil
+function ImDrawList:push_clip_rect_fullscreen() end
+
+---@return nil
+function ImDrawList:pop_clip_rect() end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param col integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_line(p1, p2, col, thickness) end
+
+---@param min Vector2f|number[]
+---@param max Vector2f|number[]
+---@param col integer
+---@param rounding number
+---@param flags integer `ImDrawFlags`
+---@param thickness number
+---@return nil
+function ImDrawList:add_rect(min, max, col, rounding, flags, thickness) end
+
+---@param min Vector2f|number[]
+---@param max Vector2f|number[]
+---@param col integer
+---@param rounding number
+---@param flags integer `ImDrawFlags`
+---@return nil
+function ImDrawList:add_rect_filled(min, max, col, rounding, flags) end
+
+---@param min Vector2f|number[]
+---@param max Vector2f|number[]
+---@param col_upr_left integer
+---@param col_upr_right integer
+---@param col_bot_right integer
+---@param col_bot_left integer
+---@return nil
+-- stylua: ignore
+function ImDrawList:add_rect_filled_multi_color(min, max, col_upr_left, col_upr_right, col_bot_right, col_bot_left) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param p4 Vector2f|number[]
+---@param col integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_quad(p1, p2, p3, p4, col, thickness) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param p4 Vector2f|number[]
+---@param col integer
+---@return nil
+function ImDrawList:add_quad_filled(p1, p2, p3, p4, col) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param col integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_triangle(p1, p2, p3, col, thickness) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param col integer
+---@return nil
+function ImDrawList:add_triangle_filled(p1, p2, p3, col) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param col integer
+---@param num_segments integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_circle(center, radius, col, num_segments, thickness) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param col integer
+---@param num_segments integer
+---@return nil
+function ImDrawList:add_circle_filled(center, radius, col, num_segments) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param col integer
+---@param num_segments integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_ngon(center, radius, col, num_segments, thickness) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param col integer
+---@param num_segments integer
+---@return nil
+function ImDrawList:add_ngon_filled(center, radius, col, num_segments) end
+
+---@param center Vector2f|number[]
+---@param radius Vector2f|number[]
+---@param col integer
+---@param rot number
+---@param num_segments integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_ellipse(center, radius, col, rot, num_segments, thickness) end
+
+---@param center Vector2f|number[]
+---@param radius Vector2f|number[]
+---@param col integer
+---@param rot number
+---@param num_segments integer
+---@return nil
+function ImDrawList:add_ellipse_filled(center, radius, col, rot, num_segments) end
+
+---@param pos Vector2f|number[]
+---@param col integer
+---@param text string
+---@return nil
+function ImDrawList:add_text(pos, col, text) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param p4 Vector2f|number[]
+---@param col integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_bezier_cubic(p1, p2, p3, p4, col, thickness) end
+
+---@param p1 Vector2f|number[]
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param col integer
+---@param thickness number
+---@return nil
+function ImDrawList:add_bezier_quadratic(p1, p2, p3, col, thickness) end
+
+---@return nil
+function ImDrawList:path_clear() end
+
+---@param pos Vector2f|number[]
+---@return nil
+function ImDrawList:path_line_to(pos) end
+
+---@param pos Vector2f|number[]
+---@return nil
+function ImDrawList:path_line_to_merge_duplicate(pos) end
+
+---@param col integer
+---@return nil
+function ImDrawList:path_fill_convex(col) end
+
+---@param col integer
+---@return nil
+function ImDrawList:path_fill_concave(col) end
+
+---@param col integer
+---@param flags integer `ImDrawFlags`
+---@param thickness number
+---@return nil
+function ImDrawList:path_stroke(col, flags, thickness) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param a_min number
+---@param a_max number
+---@param num_segments integer
+---@return nil
+function ImDrawList:path_arc_to(center, radius, a_min, a_max, num_segments) end
+
+---@param center Vector2f|number[]
+---@param radius number
+---@param a_min_of_12 integer
+---@param a_max_of_12 integer
+---@return nil
+function ImDrawList:path_arc_to_fast(center, radius, a_min_of_12, a_max_of_12) end
+
+---@param center Vector2f|number[]
+---@param radius Vector2f|number[]
+---@param a_min number
+---@param a_max number
+---@param num_segments integer
+---@return nil
+function ImDrawList:path_elliptical_arc_to(center, radius, a_min, a_max, num_segments) end
+
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param p4 Vector2f|number[]
+---@param num_segments integer
+---@return nil
+function ImDrawList:path_bezier_cubic_curve_to(p2, p3, p4, num_segments) end
+
+---@param p2 Vector2f|number[]
+---@param p3 Vector2f|number[]
+---@param num_segments integer
+---@return nil
+function ImDrawList:path_bezier_quadratic_curve_to(p2, p3, num_segments) end
+
+---@param min Vector2f|number[]
+---@param max Vector2f|number[]
+---@param rounding number
+---@param flags integer `ImDrawFlags`
+---@return nil
+function ImDrawList:path_rect(min, max, rounding, flags) end
 
 ---@enum ImGuizmoOperation
 imgui.ImGuizmoOperation = {
