@@ -1628,7 +1628,7 @@ imgui.ColumnFlags = {
 }
 
 ---@enum ImGuiStyleVar
-imgui.StyleVar = {
+imgui.ImGuiStyleVar = {
     Alpha = 0, -- number
     DisabledAlpha = 1, -- number
     WindowPadding = 2, -- Vector2f
@@ -1735,7 +1735,7 @@ imgui.InputTextFlags = {
 }
 
 ---@enum ImGuiCol
-imgui.Col = {
+imgui.ImGuiCol = {
     ImGuiCol_Text = 0,
     ImGuiCol_TextDisabled = 1,
     ImGuiCol_WindowBg = 2,
