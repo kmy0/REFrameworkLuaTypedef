@@ -470,3 +470,12 @@ function sdk.to_ptr(obj) end
 ---@param f number
 ---@return userdata
 function sdk.float_to_ptr(f) end
+
+---
+---Copies `text` to the clipboard.
+---
+---[View documents](https://cursey.github.io/reframework-book/api/sdk.html#sdkcopy_to_clipboardtext)
+---
+---@param text string
+---@return nil
+function sdk.copy_to_clipboard(text) end
